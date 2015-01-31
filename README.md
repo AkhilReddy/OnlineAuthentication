@@ -3,10 +3,10 @@ It's my Project to improve Privacy to accounts on Open Source Platforms like Moo
 
 Main rux of the Project is on collecting some general Private information importantly like Wife's name , first salary , Pet's name etc...
 and storing it in secured database.Later each time,Two or Three Questions are take from Database in random and are used to Check Authenticity
-of the User in Place of *PASSWORD*.
+of the User in Place of **PASSWORD**.
 
 It involves detailed description on the Program Code to implement the verification process.
- The program includes member functions within the class **User** as follows:
+ The program includes member functions within the class *User* as follows:
  
 * GetName()
 * GetId()
@@ -30,5 +30,5 @@ By looking at the initial functions we may think that the questions are easy but
 
 Followed by above functions (input) we will have the validating functions “Check” which are used for checking the validity of information furnished by the user to gain access i.e. comparing the data which we obtained previously using “Get” functions. The “Check” functions determine whether the answers to the queries are correct or wrong. If and only if all the answers provided by user are correct, the user gains access to the online document sent to him/her. On the other hand as soon as an answer given by the user is found out to be incorrect his/her access is denied.
 
-*The program uses Object Oriented concepts of C++ to implement the above described technique.*
+**The program uses Object Oriented concepts of C++ to implement the above described technique.**
 
