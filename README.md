@@ -17,7 +17,7 @@ It involves detailed description on the Program Code to implement the verificati
 * GetGradCGPA()
 * GetHouseNo()
 
-$ GetName():-This function will take the input names i.e names of different users which will be used for future authentication by comparing this with the name entered earlier during execution.
+1. GetName():-This function will take the input names i.e names of different users which will be used for future authentication by comparing this with the name entered earlier during execution.
 $ GetId():-Does almost the same job as the previous function i.e. initially it takes ID’s of different users in corresponding to their names which will be used for comparing with data entered while authenticating.
 $ GetDob():-This function  accepts the date of birth of different users corresponding to their names.
 $ GetOccupation():-This function accepts the occupation of the users which is used for verification purpose.
