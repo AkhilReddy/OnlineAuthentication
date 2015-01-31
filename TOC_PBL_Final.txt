@@ -1,0 +1,236 @@
+#include<iostream>
+using namespace std;
+#include<stdlib.h>
+#include<strings.h>
+class User
+{    
+    private:
+	    char name[10],date[10],job[10];
+	    long int id;
+	    int count,salary;
+	    float cgpa;
+   public:
+		void GetName(char *name1);
+		int CheckName(char *name1);
+		void GetDob(char *date1);
+		int CheckDob(char *date1);
+		void GetId(long int id1);
+		int CheckId(long int id1);
+		void GetOccupation(char *job1);
+	        int CheckOccupation(char *job1);
+		void GetFatherCount(int count1);
+		int CheckFatherCount(int count1);
+		void GetFirstSalary(int salary1);
+		int CheckFirstSalary(int salary1);
+		void GetGradCGPA(float cgpa1);
+		int CheckGradCGPA(float cgpa1);
+};
+
+void User::GetName(char *name1)
+{
+	strcpy(name,name1);
+}
+void User::GetDob(char *date1)
+{
+	strcpy(date,date1);
+}
+void User::GetId(long int id1)
+{
+	id=id1;
+}
+void User::GetOccupation(char *job1)
+{
+	strcpy(job,job1);
+}
+void User::GetFatherCount(int count1)
+{
+	count=count1;
+}
+void User::GetFirstSalary(int salary1)
+{
+	salary=salary1;
+}
+void User::GetGradCGPA(float cgpa1)
+{
+	cgpa=cgpa1;
+}
+int User::CheckName(char *name1)
+{
+	if(strcmp(name,name1)==0)
+		return (1);
+	else
+		return (0);
+}
+int User::CheckDob(char *date1)
+{
+	if(strcmp(date,date1)==0)
+		return (1);
+	else
+		return (0);
+	
+}
+int User::CheckOccupation(char *job1)
+{
+	if(strcmp(job,job1)==0)
+		return (1);
+	else
+		return (0);
+}
+int User::CheckId(long int id1)
+{
+	if( id==id1)
+		return 1;
+	else
+		return 0;
+}
+int User::CheckFatherCount(int count1)
+{
+	if( count==count1)
+		return 1;
+	else
+		return 0;
+}
+int User::CheckFirstSalary(int salary1)
+{
+	if( salary==salary1)
+		return 1;
+	else
+		return 0;
+}
+int User::CheckGradCGPA(float cgpa1)
+{
+	if( cgpa==cgpa1)
+		return 1;
+	else
+		return 0;
+}	
+int main()
+{
+	User Items[2];
+	char name[20],date[20],job[20],_name[20],_date[20],_job[20];
+	long int id,_id;
+	int n=0,x=0,ch,j;
+	int count,salary,_count,_salary;
+	float cgpa,_cgpa;
+	for(int i=0;i<2;i++)
+	{
+		system("cls");
+		cout<<"\n\tPlease enter Details of User "<<i+1<<" : \n\n";
+		cout<<"\nPlease enter Name: ";
+		cin>>name;
+		Items[i].GetName(name);
+		cout<<"\nPlease enter Date of birth(dd-mm-yyyy): ";
+		cin>>date;
+		Items[i].GetDob(date);
+		cout<<"\nPlease enter Unique Id: ";
+		cin>>id;
+		Items[i].GetId(id);
+		cout<<"\nPlease enter Present Occupation: ";
+		cin>>job;
+		Items[i].GetOccupation(job);
+	    cout<<"\nPlease enter total number of alphabets in Father's name: ";
+	    cin>>count;
+		Items[i].GetFatherCount(count);
+		cout<<"\nPlease enter First Salary: ";
+		cin>>salary;
+		Items[i].GetFirstSalary(salary);
+		cout<<"\nPlease enter CGPA in Graduation: ";
+		cin>>cgpa;
+		Items[i].GetGradCGPA(cgpa);
+	}
+	while(1)
+	{
+		n++;
+		system("cls");
+		cout<<"\nPls enter your Name:";
+		cin>>_name;	
+		cout<<"\nPls enter your Date of Birth(dd-mm-yyyy):";
+		cin>>_date;
+		cout<<"\nPls enter your Id:";
+		cin>>_id;
+		for(j=0;j<2;j++)
+		{
+     	     if(Items[j].CheckName(_name)&&Items[j].CheckDob(_date)&& Items[j].CheckId(_id))
+     	     {
+     	     	 system("cls");
+		         cout<<"\n\tDetails Entered are Correct.\n\tEnter a few more details.";
+		     }
+		     else
+		     {
+			     continue; 
+			 }
+	         while(x<3)
+	             {
+	             	  x++;
+	                  ch=rand()%4+1;
+			          switch(ch)
+	                  {
+	                  	    case 1:
+			                   cout<<"\n\nPls enter your Occupation:";
+			                   cin>>_job;
+			                   if(!Items[j].CheckOccupation(_job))
+			                   {
+			                     	cout<<"\n\n\tSorry!!Details Entered are wrong.";
+			                        break;	
+			                   }
+			                   else
+			                   {
+			                   	cout<<"\n\n\tCongratulations. Access Permitted."<<endl;
+			                   	exit(0);
+			                   }
+		                    case 2:
+			                   cout<<"\n\nPls enter total number of alphabets in your Father's Name:";
+			                   cin>>_count;
+			                   if(!Items[j].CheckFatherCount(_count))
+			                   {
+			                     	cout<<"\n\n\tSorry!!Details Entered are wrong.";
+			                        break;	
+			                   }
+			                   else
+			                   {
+			                   	cout<<"\n\n\tCongratulations. Access Permitted."<<endl;
+			                   	exit(0);
+			                   }
+		                    case 3:
+			                    cout<<"\n\nPls enter amount of your First Salary:";
+			                    cin>>_salary;
+		                     	if(!Items[j].CheckFirstSalary(_salary))
+		                     	{
+				                      cout<<"\n\n\tSorry!!Details Entered are wrong.";
+			                          break;	
+			                    }
+			                    else
+			                   {
+			                   	cout<<"\n\n\tCongratulations. Access Permitted."<<endl;
+			                   	exit(0);
+			                   }
+		                    case 4:
+		                      	cout<<"\n\nPls enter CGPA in your Graduation :";
+			                    cin>>_cgpa;
+			                    if(!Items[j].CheckGradCGPA(_cgpa))
+		         	            {
+				                      cout<<"\n\n\tSorry!!Details Entered are wrong.";
+			                          break;	
+		          	            }
+		          	            else
+			                   {
+			                   	cout<<"\n\n\tCongratulations. Access Permitted."<<endl;
+			                   	exit(0);
+			                   }
+	                  }
+	                  
+                 }
+        }
+        if(j==2&&n!=2)
+        {
+            cout<<"\n\n\tDetails entered are wrong. Try again.";
+		    continue;
+		}
+        else if(n==2)
+	    {
+	        cout<<"\n\n\tSorry!!Access Denied.";
+		 	exit(0);
+		}
+    }
+    return 0;
+}
