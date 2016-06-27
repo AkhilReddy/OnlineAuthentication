@@ -1,7 +1,7 @@
 # OnlineAuthentication
 It's my Project to improve Privacy to accounts on Open Source Platforms like Moodle tc..
 
-Main rux of the Project is on collecting some general Private information importantly like Wife's name , first salary , Pet's name etc...
+Main crux of the Project is on collecting some general Private information importantly like Wife's name , first salary , Pet's name etc...
 and storing it in secured database.Later each time,Two or Three Questions are take from Database in random and are used to Check Authenticity
 of the User in Place of **PASSWORD**.
 
